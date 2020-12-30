@@ -53,60 +53,7 @@ Below is a basic example of WaxJS functionality. To use this demo, click WAX Log
 " width="400" height="400"></iframe>
 
 <script>
-	function showIPFSImage () {
-  // Create the IPFS node instance
-  const node = new Ipfs()
-
-  // prepare the node
-  node.on('ready', () => {
-    // cat to get the image from IPFS, beware it will take a few seconds
-    // And you may need to keep that image ready on a small droplet server that will serve as a sort of CDN to your IPFS content
-    // if no other node in the IPFS network has it
-    node.files.cat('Put the hash of your IPFS image here', function (err, file) {
-      if (err) {
-        throw err
-      }
-
-      // converting the received data into an "image"
-      var bytes = new Uint8Array(file);
-
-      var image = document.getElementById('IdOfImage'); // IdOfImage is the id attribute of the img tag in your html page
-      image.src = "data:image/png;base64," + encode(bytes);  
-
-    })
-	 
-    const wax = new waxjs.WaxJS('https://wax.greymass.com', null, null, false);
-
-    //automatically check for credentials
-    autoLogin();
-
-    //checks if autologin is available 
-    async function autoLogin() {
-        let isAutoLoginAvailable = await wax.isAutoLoginAvailable();
-        if (isAutoLoginAvailable) {
-            let userAccount = wax.userAccount;
-            let pubKeys = wax.pubKeys;
-            let str = 'AutoLogin enabled for account: ' + userAccount + '<br/>Active: ' + pubKeys[0] + '<br/>Owner: ' + pubKeys[1]
-            document.getElementById('autologin').insertAdjacentHTML('beforeend', str);
-        }
-        else {
-            document.getElementById('autologin').insertAdjacentHTML('beforeend', 'Not auto-logged in');
-        }
-    }
-
-    //normal login. Triggers a popup for non-whitelisted dapps
-    async function login() {
-        try {
-            //if autologged in, this simply returns the userAccount w/no popup
-            let userAccount = await wax.login();
-            let pubKeys = wax.pubKeys;
-            let str = 'Account: ' + userAccount + '<br/>Active: ' + pubKeys[0] + '<br/>Owner: ' + pubKeys[1]
-            document.getElementById('loginresponse').insertAdjacentHTML('beforeend', str);
-        } catch (e) {
-            document.getElementById('loginresponse').append(e.message);
-        }
-    } 
-
+	
     async function sign() {
     if(!wax.api) {
         return document.getElementById('response').append('* Login first *');
