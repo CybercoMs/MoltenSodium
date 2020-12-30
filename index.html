@@ -13,9 +13,9 @@
       };
 
       $.ajax(settings).done(function (response) {
-        console.log(response.asset_id);
-	console.log("wind speed: " + response.asset_id);      
-        var content = response.asset_id;
+        console.log(response.data[0].asset_id);
+	console.log("wind speed: " + response.data[0].asset_id);      
+        var content = response.data[0].asset_id;
         $("#account").append(content);
       });
 
