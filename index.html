@@ -90,7 +90,7 @@ Below is a basic example of WaxJS functionality. To use this demo, click WAX Log
 </script>
 
 <script2>
-function showIPFSImage () {
+	function showIPFSImage () {
   // Create the IPFS node instance
   const node = new Ipfs()
 
@@ -117,10 +117,10 @@ function showIPFSImage () {
       // node is now 'offline'
     //})
   })
-}
+ }
 </script2>
 <script3> 
-// public method for encoding an Uint8Array to base64
+	// public method for encoding an Uint8Array to base64
 // Shamelessly stolen off some stackoverflow response
 function encode (input) {
     var keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
@@ -147,7 +147,7 @@ function encode (input) {
                   keyStr.charAt(enc3) + keyStr.charAt(enc4);
     }
     return output;
-}
+ }
 </script3> 
 </body>
 </html>
