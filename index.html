@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 <script>
-fetch('https://wax.api.atomicassets.io/atomicassets/v1/assets?owner=pgtaw.wam&collection_name=kogsofficial&schema_name=promos&page=1&limit=100&order=desc&sort=asset_id')
-    .then(res => res.json())
-    .then((out) => {
-        console.log('Output: ', out);
-}).catch(err => console.error(err));
+  function loadJSON(https://wax.api.atomicassets.io/atomicassets/v1/assets?owner=pgtaw.wam&collection_name=kogsofficial&schema_name=promos&page=1&limit=100&order=desc&sort=asset_id) {
+    fetch(https://wax.api.atomicassets.io/atomicassets/v1/assets?owner=pgtaw.wam&collection_name=kogsofficial&schema_name=promos&page=1&limit=100&order=desc&sort=asset_id)
+      .then(function(res) { return res.json(); })
+      .then(function(data) {
+         document.getElementById('content').innerHTML = JSON.stringify(data);
+      });
+  }
 </script>
    <script src='waxjs.js'></script>
 <body>
