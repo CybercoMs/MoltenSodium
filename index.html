@@ -15,7 +15,7 @@
       $.ajax(settings).done(function (response) {
         console.log(response);
 	console.log("wind speed: " + response.asset_id);      
-        var content = response.asset_id;
+        var content = response;
         $("#account").append(content);
       });
 
