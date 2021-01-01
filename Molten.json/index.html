@@ -1,12 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<html>
-    import ModelViewer from 'react-model-viewer';
+import {GLTFModel,AmbientLight,DirectionLight} from 'react-3d-viewer'
 
-    const modelPath = 'https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Duck/glTF/Duck.gltf';
-
-        const App = () => (
-        <ModelViewer type="gtlf" src={modelPath} />
-    );
-
-</html>
+render(){
+  return(
+    <div>
+      <GLTFModel
+        src="./src/lib/model/DamagedHelmet.gltf"
+      >
+        <AmbientLight color={0xffffff}/>
+        <DirectionLight color={0xffffff} position={{x:100,y:200,z:100}}/>
+        <DirectionLight color={0xff00ff} position={{x:-100,y:200,z:-100}}/>
+      </GltfModel>
+    </div>
+  )
+}
