@@ -86,5 +86,22 @@
             engine.resize();
         });
     </script>
+    <script>
+        var createScene = function () {
+        var scene = new BABYLON.Scene(engine);
+        var camera = new BABYLON.ArcRotateCamera("Camera", -Math.PI / 2,  Math.PI / 2, 5, BABYLON.Vector3.Zero(), scene);
+	    camera.attachControl(canvas, true);
+	
+	    //Light direction is directly down
+	    var light = new BABYLON.DirectionalLight("DirectionalLight", new BABYLON.Vector3(0, -1, 0), scene);
+	    light.diffuse = new BABYLON.Color3(1, 0, 0);
+	    light.specular = new BABYLON.Color3(0, 1, 0);
+
+	
+	    
+        return scene;
+
+        };
+    </script>    
 </body>
 </html>
