@@ -55,6 +55,11 @@
                 scene.createDefaultCameraOrLight(true);
                 scene.activeCamera.attachControl(canvas, false);
                 scene.activeCamera.alpha += Math.PI; // camera +180°
+		scene.light = new BABYLON.HemisphericLight("HemisphericLight", new BABYLON.Vector3(0, -1, 0), scene);
+	        scene.light.setEnabled(true);
+	        scene.light.diffuse = new BABYLON.Color3(1, 0, 0);
+	        scene.light.specular = new BABYLON.Color3(0, 1, 0);
+	        scene.light.intensity = 1000;
             });
         
             return scene;
