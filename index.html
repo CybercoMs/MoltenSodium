@@ -53,11 +53,10 @@
             // The first parameter can be used to specify which mesh to import. Here we import all meshes
             BABYLON.SceneLoader.Append("https://storage.opensea.io/files/", "532ce19319ae858461ad8c32bb87d3be.glb", scene, function (newMeshes) {
                 scene.createDefaultCameraOrLight(true);
-		scene.DefaultLight.intensity = 100;    
                 scene.activeCamera.attachControl(canvas, false);
                 scene.activeCamera.alpha += Math.PI; // camera +180°
             });
-            
+        
             return scene;
         }
                 var engine;
@@ -82,13 +81,30 @@
                 }
             });
         });
-	
+
         // Resize
         window.addEventListener("resize", function () {
             engine.resize();
         });
     </script>
-    
+    <script>
+        var createScene = function () {
+        var scene2 = new BABYLON.Scene(engine);
+        var camera = new BABYLON.ArcRotateCamera("Camera", -Math.PI / 2,  Math.PI / 2, 5, BABYLON.Vector3.Zero(), scene2);
+	             camera.attachControl(canvas, true);
+	
+	                //Light direction is directly down
+	       var light = new BABYLON.HemisphericLight("HemisphericLight", new BABYLON.Vector3(0, -1, 0), scene);
+	       light.setEnabled(true);
+	       light.diffuse = new BABYLON.Color3(1, 0, 0);
+	       light.specular = new BABYLON.Color3(0, 1, 0);
+	       light.intensity = 1000;
+	
+	    
+         return scene2;
+
+         };
+    </script>
     
 </body>
 </html>
