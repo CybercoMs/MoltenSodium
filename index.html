@@ -96,7 +96,7 @@
 	    var light = new BABYLON.DirectionalLight("DirectionalLight", new BABYLON.Vector3(-1000, -2000, -1000), scene);
 	    light.diffuse = new BABYLON.Color3(1, 0, 0);
 	    light.specular = new BABYLON.Color3(0, 1, 0);
-	    var light0 = new BABYLON.PointLight("Omni0", new BABYLON.Vector3(0, 10, 0), scene);
+	    light.intensity = 10;
 	
 	    
         return scene;
