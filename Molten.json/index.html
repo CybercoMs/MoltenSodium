@@ -4,3 +4,29 @@
 
 <!-- Use it like any other HTML element -->
 <model-viewer src="https://storage.opensea.io/files/2132a002810697674962aa8649ad5380.glb" alt="A 3D model of an astronaut" auto-rotate camera-controls></model-viewer>
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>BabylonJS Viewer - UFO</title>
+    </head>
+
+    <body>
+        <babylon extends="default, shadowDirectionalLight, environmentMap" templates.nav-bar.params.hide-logo="true" templates.main.params.fill-screen="true">
+            <scene glow="true">
+            </scene>
+            <lab>
+                <environment-main-color r="0.5" g="0.2" b="0.2"></environment-main-color>
+            </lab>
+            <model url="https://storage.opensea.io/files/2132a002810697674962aa8649ad5380.glb">
+                <animation auto-start="true"></animation>
+            </model>
+            <camera beta="0.8"></camera>
+        </babylon>
+        <script src="viewer.js"></script>
+    </body>
+
+</html>
