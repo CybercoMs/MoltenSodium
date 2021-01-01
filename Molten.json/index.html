@@ -1,26 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>BabylonJS Viewer - UFO</title>
-    </head>
+    import ModelViewer from 'react-model-viewer';
 
-    <body>
-        <babylon extends="default, shadowDirectionalLight, environmentMap" templates.nav-bar.params.hide-logo="true" templates.main.params.fill-screen="true">
-            <scene glow="true">
-            </scene>
-            <lab>
-                <environment-main-color r="0.5" g="0.2" b="0.2"></environment-main-color>
-            </lab>
-            <model url="https://storage.opensea.io/files/2132a002810697674962aa8649ad5380.glb">
-                <animation auto-start="true"></animation>
-            </model>
-            <camera beta="0.8"></camera>
-        </babylon>
-        <script src="viewer.js"></script>
-    </body>
+    const modelPath = 'https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/master/2.0/Duck/glTF/Duck.gltf';
+
+        const App = () => (
+        <ModelViewer type="gtlf" src={modelPath} />
+    );
 
 </html>
