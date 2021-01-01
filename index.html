@@ -49,18 +49,18 @@
         var createDefaultEngine = function() { return new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true,  disableWebGL2Support: false}); };
         var delayCreateScene = function () {
             var scene = new BABYLON.Scene(engine);
-        
+                scene.light = new BABYLON.HemisphericLight("HemisphericLight", new BABYLON.Vector3(0, -1, 0), scene);
+	        scene.light.setEnabled(true);
+	        scene.light.diffuse = new BABYLON.Color3(1, 0, 0);
+	        scene.light.specular = new BABYLON.Color3(0, 1, 0);
+	        scene.light.intensity = 1000;
+		scene.clearColor = new BABYLON.Color3(0.5, 0.8, 0.5);
             // The first parameter can be used to specify which mesh to import. Here we import all meshes
             BABYLON.SceneLoader.Append("https://storage.opensea.io/files/", "532ce19319ae858461ad8c32bb87d3be.glb", scene, function (newMeshes) {
                 scene.createDefaultCameraOrLight(true);
                 scene.activeCamera.attachControl(canvas, false);
                 scene.activeCamera.alpha += Math.PI; // camera +180°
-		scene.light = new BABYLON.HemisphericLight("HemisphericLight", new BABYLON.Vector3(0, -1, 0), scene);
-	        scene.light.setEnabled(true);
-	        scene.light.diffuse = new BABYLON.Color3(1, 0, 0);
-	        scene.light.specular = new BABYLON.Color3(0, 1, 0);
-	        scene.light.intensity = 1000;
-		scene.clearColor = new BABYLON.Color3(0.5, 0.8, 0.5);   
+		   
             });
         
             return scene;
