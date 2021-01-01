@@ -42,7 +42,15 @@
     <canvas id="renderCanvas"></canvas>
     <script>
         var canvas = document.getElementById("renderCanvas");
+		#renderCanvas {
+    			width : 600px; 
+    			height: 400px;
+    			border: 1px dashed white;
+		}
 
+	body {
+        background: #236478;
+        }
         var engine = null;
         var scene = null;
         var sceneToRender = null;
@@ -55,7 +63,7 @@
 	        //scene.light.specular = new BABYLON.Color3(1, 1, 1);
 	        scene.light.intensity = 2;
 		scene.light.attachControl(canvas, true);
-		scene.clearColor = new BABYLON.Color3(0.85, 0.18, 0.18);
+		//scene.clearColor = new BABYLON.Color3(0.85, 0.18, 0.18);
             // The first parameter can be used to specify which mesh to import. Here we import all meshes
             BABYLON.SceneLoader.Append("https://storage.opensea.io/files/", "532ce19319ae858461ad8c32bb87d3be.glb", scene, function (newMeshes) {
                 scene.createDefaultCameraOrLight(true);
