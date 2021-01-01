@@ -121,13 +121,14 @@
                 scene,
                 function (shaderBallMeshes) {
                     // selecting the mesh we will animate later on scene.registerBeforeRender()
-                    shaderBall = scene.getMeshByID("edd6dcbdb754fce10fbfdd0598ac3adc");
+                    shaderBall = scene.getMeshByID("simpleShaderBall");
                     // renaming the default gltf empty object "__root__" and adapting it to the scene
                     shaderBallGLTFRoot = shaderBall.parent;
                     shaderBallGLTFRoot.name = "__shaderBall-root__";
                     shaderBallGLTFRoot.scaling.scaleInPlace(0.5);
                     shaderBallGLTFRoot.position.y = 3;
                     shaderBallGLTFRoot.position.x = 3;
+                    shaderBallGLTFRoot.position.z = 3;
                     shaderBallGLTFRoot.rotationQuaternion = null; //this will help for the rotation anim later
                     // tweaking materials
                     var shaderBallMtl = shaderBall.material;
