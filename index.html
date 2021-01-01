@@ -53,7 +53,7 @@
             // The first parameter can be used to specify which mesh to import. Here we import all meshes
             BABYLON.SceneLoader.Append("https://storage.opensea.io/files/", "532ce19319ae858461ad8c32bb87d3be.glb", scene, function (newMeshes) {
                 scene.createDefaultCameraOrLight(true);
-		    DefaultCameraOrLigh.intensity = 1000;
+		    DefaultCameraOrLight.intensity = 1000;
                 scene.activeCamera.attachControl(canvas, false);
                 scene.activeCamera.alpha += Math.PI; // camera +180°
             });
