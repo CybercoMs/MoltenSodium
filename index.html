@@ -81,7 +81,12 @@
                 }
             });
         });
-
+	//Light direction is directly down
+	    var light = new BABYLON.HemisphericLight("HemisphericLight", new BABYLON.Vector3(0, -1, 0), scene);
+	    light.setEnabled(true);
+	    light.diffuse = new BABYLON.Color3(1, 0, 0);
+	    light.specular = new BABYLON.Color3(0, 1, 0);
+	    light.intensity = 1000;
         // Resize
         window.addEventListener("resize", function () {
             engine.resize();
@@ -93,12 +98,7 @@
         var camera = new BABYLON.ArcRotateCamera("Camera", -Math.PI / 2,  Math.PI / 2, 5, BABYLON.Vector3.Zero(), scene2);
 	    camera.attachControl(canvas, true);
 	
-	    //Light direction is directly down
-	    var light = new BABYLON.HemisphericLight("HemisphericLight", new BABYLON.Vector3(0, -1, 0), scene);
-	    light.setEnabled(true);
-	    light.diffuse = new BABYLON.Color3(1, 0, 0);
-	    light.specular = new BABYLON.Color3(0, 1, 0);
-	    light.intensity = 1000;
+	    
 	
 	    
         return scene2;
