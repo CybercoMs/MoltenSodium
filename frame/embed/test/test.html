@@ -58,10 +58,10 @@
 		scene.createDefaultCameraOrLight(true);
                 scene.activeCamera.attachControl(canvas, false);
                 scene.activeCamera.alpha += Math.PI; // camera +180°
-		const scene.sensorRel = new RelativeOrientationSensor({frequency: 30});
+		const sensorRel = new RelativeOrientationSensor({frequency: 30});
 		
-		scene.sensorRel.onreading = () => scene.rotationQuaternion.FromArray(sensorRel.quaternion);
-		scene.sensorRel.start();   
+		sensorRel.onreading = () => scene.rotationQuaternion.FromArray(sensorRel.quaternion);
+		sensorRel.start();   
             });
         
             return scene;
