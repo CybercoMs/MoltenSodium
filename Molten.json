@@ -1,24 +1,129 @@
 {
-	"name": "Asset Name",
-	"description": "Lorem ipsum...",
-	"image": "https:\/\/s3.amazonaws.com\/your-bucket\/images\/{id}.png",
-	"properties": {
-		"simple_property": "example value",
-		"rich_property": {
-			"name": "Name",
-			"value": "123",
-			"display_value": "123 Example Value",
-			"class": "emphasis",
-			"css": {
-				"color": "#ffffff",
-				"font-weight": "bold",
-				"text-decoration": "underline"
-			}
-		},
-		"array_property": {
-			"name": "Name",
-			"value": [1,2,3,4],
-			"class": "emphasis"
-		}
-	}
+    "collection": {
+        "editors": [
+            "0x4f0124d010a29a81855ab72c59447b6186153250",
+            "0x958e1e0be167e89eb05eb81e5ac57d260eb9ba03",
+            "0x0239769a1adf4def9f07da824b80b9c4fcb59593",
+            "0xe96a1b303a1eb8d04fb973eb2b291b8d591c8f72",
+            "0x7bd13f8c9bc23d7caff3cb5248c8ba63226df8a1",
+            "0x530cf036ed4fa58f7301a9c788c9806624cefd19",
+            "0x30dd12344ce6bb4596c37f68b507028fabfe2e0f",
+            "0xd7c318e9f9129239f6ba4e10994137113dcf6244",
+            "0xb2f4b16595e02a9721f97e3e30fb5bbbf73f5f54"
+        ],
+        "payment_tokens": [
+            {
+                "id": 13689077,
+                "symbol": "ETH",
+                "address": "0x0000000000000000000000000000000000000000",
+                "image_url": "https://lh3.googleusercontent.com/7hQyiGtBt8vmUTq4T0aIUhIhT00dPhnav87TuFQ5cLtjlk724JgXdjQjoH_CzYz-z37JpPuMFbRRQuyC7I9abyZRKA",
+                "name": "Ether",
+                "decimals": 18,
+                "eth_price": 1.0,
+                "usd_price": 1048.38
+            },
+            {
+                "id": 12182941,
+                "symbol": "DAI",
+                "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
+                "image_url": "https://lh3.googleusercontent.com/9wRB1clkMysBIYUd3SYnDLCVeZ1biqgAXLHtIYeWv_oG5XPgTYayh47mZclHw81O6SfJhl3ZhICNApiKfGSeMIc",
+                "name": "Dai Stablecoin",
+                "decimals": 18,
+                "eth_price": 0.0009538526106945954,
+                "usd_price": 1.0
+            },
+            {
+                "id": 4645681,
+                "symbol": "WETH",
+                "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+                "image_url": "https://lh3.googleusercontent.com/kPzD9AH9Xt4Vr7NXphLy2Yyf5ZWM0vfN_wMhJs0HWJpQjFZm0pcmZ880vcJQVLxPgdnOTEfUuYbkiaGxcTT_ZnCy",
+                "name": "Wrapped Ether",
+                "decimals": 18,
+                "eth_price": 1.0,
+                "usd_price": 1048.38
+            },
+            {
+                "id": 4403908,
+                "symbol": "USDC",
+                "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+                "image_url": "https://lh3.googleusercontent.com/PxC_K0Y22A1Xs0CeVknf4YUSxSqH_1bPCG0a4uD7WRkwbbtinqryjDEvoTYSbBFDXXTliuyo38-Y_ecNUEj0fMimQA",
+                "name": "USD//C",
+                "decimals": 6,
+                "eth_price": 0.0009538526106945954,
+                "usd_price": 1.0
+            }
+        ],
+        "primary_asset_contracts": [
+            {
+                "address": "0x35ee4c76960d8b1f686bffc3954fd29a88ad659b",
+                "asset_contract_type": "semi-fungible",
+                "created_date": "2020-12-27T04:23:03.358770",
+                "name": "Unidentified contract",
+                "nft_version": null,
+                "opensea_version": null,
+                "owner": null,
+                "schema_name": "ERC1155",
+                "symbol": "",
+                "total_supply": null,
+                "description": null,
+                "external_link": null,
+                "image_url": null,
+                "default_to_fiat": false,
+                "dev_buyer_fee_basis_points": 0,
+                "dev_seller_fee_basis_points": 0,
+                "only_proxied_transfers": false,
+                "opensea_buyer_fee_basis_points": 0,
+                "opensea_seller_fee_basis_points": 250,
+                "buyer_fee_basis_points": 0,
+                "seller_fee_basis_points": 250,
+                "payout_address": null
+            }
+        ],
+        "traits": {},
+        "stats": {
+            "seven_day_volume": 0.0,
+            "total_volume": 0.0,
+            "seven_day_change": 0.0,
+            "seven_day_sales": 0.0,
+            "total_sales": 0.0,
+            "total_supply": 3.0,
+            "count": 3.0,
+            "num_owners": 1,
+            "seven_day_average_price": 0.0,
+            "average_price": 0.0,
+            "market_cap": 0.0
+        },
+        "banner_image_url": null,
+        "chat_url": null,
+        "created_date": "2020-12-27T04:23:04.006250",
+        "default_to_fiat": false,
+        "description": null,
+        "dev_buyer_fee_basis_points": "0",
+        "dev_seller_fee_basis_points": "0",
+        "discord_url": null,
+        "display_data": {
+            "card_display_style": "contain",
+            "images": []
+        },
+        "external_url": null,
+        "featured": false,
+        "featured_image_url": null,
+        "hidden": true,
+        "safelist_request_status": "not_requested",
+        "image_url": null,
+        "is_subject_to_whitelist": false,
+        "large_image_url": null,
+        "medium_username": null,
+        "name": "CybercoMs",
+        "only_proxied_transfers": false,
+        "opensea_buyer_fee_basis_points": "0",
+        "opensea_seller_fee_basis_points": "250",
+        "payout_address": null,
+        "require_email": false,
+        "short_description": null,
+        "slug": "CybercoMs",
+        "telegram_url": null,
+        "twitter_username": null,
+        "wiki_url": null
+    }
 }
