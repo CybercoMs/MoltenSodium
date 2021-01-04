@@ -6,6 +6,7 @@
 		"simple_property": "example value",
 		"rich_property": {
 			"name": "Name",
+			"collection-name" : "123 Example Value"
 			"value": "123",
 			"display_value": "123 Example Value",
 			"class": "emphasis",
