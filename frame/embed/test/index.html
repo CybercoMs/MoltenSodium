@@ -60,8 +60,9 @@
               scene.activeCamera.alpha += Math.PI; // camera +180°;
               scene.material = new BABYLON.StandardMaterial("texture1", scene);
               materialScene.diffuseTexture = new BABYLON.Texture("https://wax.atomichub.io/ipfs/QmVw3fDskNRcxQweB9vRoo8W8PchiTjtzaATFuGVfY3WWS/Kog/no_foil/common/1-96-26-23-0_front.png", scene);
-		          materialScene.diffuseTexture.uOffset = 0;
-              materialScene.diffuseTexture.vOffset = 0;
+	      materialScene.diffuseTexture.uOffset = 0;
+              materialScene.diffuseTexture.vOffset = 0
+		    
             });
         
             return scene;
