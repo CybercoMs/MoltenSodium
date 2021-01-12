@@ -50,7 +50,7 @@
             var scene = new BABYLON.Scene(engine);
         
             // The first parameter can be used to specify which mesh to import. Here we import all meshes
-            BABYLON.SceneLoader.Append("https://github.com/CybercoMs/MoltenSodium/blob/main/frame/embed/test/", "RFOX_HALL.glb", scene, function (newMeshes) {
+            BABYLON.SceneLoader.Append("https://cybercoms.github.io/MoltenSodium/frame/embed/test/", "RFOX_HALL.glb", scene, function (newMeshes) {
                 scene.light = new BABYLON.HemisphericLight("HemisphericLight", new BABYLON.Vector3(0, -1, 0), scene);
 	        scene.light.diffuse = new BABYLON.Color3(1, 1, 1);
 	        //scene.light.specular = new BABYLON.Color3(1, 1, 1);
