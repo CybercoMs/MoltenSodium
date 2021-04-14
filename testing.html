@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <title>Sample Page</title>
+      <script>
+         var settings = {
+           "async": true,
+           "crossDomain": true,
+           "url": "https://wax.api.atomicassets.io/atomicassets/v1/assets?owner=pgtaw.wam&collection_name=upliftworld&template_id=97462&page=1&limit=100&order=desc&sort=asset_id",
+           "method": "GET"
+         }
+
+         $.ajax(settings).done(function (response) {
+           console.log(response);
+
+           var content = response.data[0].data.name;
+           $("#assetname").append(content);
+           var content2 = response.data[0].asset_id;
+           $("#assetid").append(content2);
+           var content3 = response.data[0].template_mint;
+           $("#assetmintnumber").append(content3);
+           var content4 = "https://ipfs.atomichub.io/ipfs/";
+           $("#assetimg").append(content4);
+           var content5 = response.data[0].template.immutable_data.img;
+           $("#assetimg").append(content5);
+           
+
+         });
+      </script>
+   </head>
+   <body>
+      <h1>Sample Page</h1>
+      <div id="assetname">Asset Name: </div>
+      <div id="assetid">Atomic Asset ID: </div>
+      <div id="assetmintnumber">Mint #  </div>
+      <a href><div id="assetimg"></div></a>
+      <img id=#assetimg></img>
+   </body>
+</html>
