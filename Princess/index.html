@@ -61,16 +61,16 @@
 		scene.createDefaultCameraOrLight(true);
                 scene.activeCamera.attachControl(canvas, false);
                 scene.activeCamera.alpha += Math.PI; // camera +180°
-		   
-            });
-            scene.clearColor = new BABYLON.Color3(0, 0, 0);
 		var earthAxis = new BABYLON.Vector3(Math.sin(23 * Math.PI/180), Math.cos(23 * Math.PI/180), 0);
             	var axisLine = BABYLON.MeshBuilder.CreateLines("axis", {points:[earthAxis.scale(-5), earthAxis.scale(5)]}, scene);
           
             	var angle = 0.01;
             	scene.registerBeforeRender(function() {
-                scene.rotate(earthAxis, angle, BABYLON.Space.WORLD);
-            })
+                scene.rotate(earthAxis, angle, BABYLON.Space.WORLD);   
+            });
+            scene.clearColor = new BABYLON.Color3(0, 0, 0);
+		
+          
             return scene;
         }
                 var engine;
