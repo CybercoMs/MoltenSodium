@@ -51,6 +51,7 @@
 	    //https://cybercoms.github.io/MoltenSodium/Princess/QmaKvvosxn9TBzZyBoMrQtzixCGTtr12gr9fjzPstXhk12.glb	
             //https://github.com/CybercoMs/MoltenSodium/blob/main/LADZstill.glb
 		//https://cybercoms.github.io/MoltenSodium/Princess/torus.glb
+		
             // The first parameter can be used to specify which mesh to import. Here we import all meshes
             BABYLON.SceneLoader.Append("https://cybercoms.github.io/MoltenSodium/Princess/", "ggvoxupright.glb", scene, function (newMeshes) {
                 scene.light = new BABYLON.HemisphericLight("HemisphericLight", new BABYLON.Vector3(0, -1, 0), scene);
@@ -63,6 +64,13 @@
 		   
             });
             scene.clearColor = new BABYLON.Color3(0, 0, 0);
+		var earthAxis = new BABYLON.Vector3(Math.sin(23 * Math.PI/180), Math.cos(23 * Math.PI/180), 0);
+            	var axisLine = BABYLON.MeshBuilder.CreateLines("axis", {points:[earthAxis.scale(-5), earthAxis.scale(5)]}, scene);
+          
+            	var angle = 0.01;
+            	scene.registerBeforeRender(function() {
+                scene.rotate(earthAxis, angle, BABYLON.Space.WORLD);
+            })
             return scene;
         }
                 var engine;
