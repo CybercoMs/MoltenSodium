@@ -66,14 +66,8 @@
                 scene.activeCamera.attachControl(canvas, false);
                 scene.activeCamera.alpha += Math.PI; // camera +180°
 		   
-            		});
-            		scene.clearColor = new BABYLON.Color3(0, 0, 0);
-	    		scene.registerBeforeRender(function() {
-            			let mesh = scene.getMeshByName("__root__");
-            			if (mesh){
-                			mesh.rotationQuaterniomesh.rotation.y += 0.005n = null;
-                
-            			}
+            	});
+            		
           
             return scene;
         }
