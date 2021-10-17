@@ -65,10 +65,10 @@
 		scene.createDefaultCameraOrLight(true);
                 scene.activeCamera.attachControl(canvas, false);
                 scene.activeCamera.alpha += Math.PI; // camera +180°
-		   
+		scene.rotation.y += 0.005   
             });
             scene.clearColor = new BABYLON.Color3(0, 0, 0);
-	    scene.rotation.y += 0.005
+	    
           
             return scene;
         }
