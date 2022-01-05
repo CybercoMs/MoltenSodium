@@ -66,7 +66,7 @@
 	        //scene.light.specular = new BABYLON.Color3(1, 1, 1);
 	        scene.light.intensity = 5.2;
 		scene.createDefaultCameraOrLight(true);
-                scene.activeCamera.attachControl(canvas, false);
+                scene.activeCamera.attachControl(canvas, true);
                 scene.activeCamera.alpha += Math.PI;
 		scene.activeCamera.rotation = new BABYLON.Vector(1,0,0);   
             });
