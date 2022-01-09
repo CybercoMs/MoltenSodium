@@ -59,7 +59,7 @@
 		scene.createDefaultCameraOrLight(true);
                 scene.activeCamera.attachControl(canvas, true);
                 //scene.activeCamera.alpha += Math.PI; // camera +180°
-		//scene.activeCamera.rotate.type="1";   
+		scene.camera.behaviors.auto-rotate="1";   
             });
         
             return scene;
