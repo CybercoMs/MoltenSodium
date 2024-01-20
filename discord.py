@@ -41,5 +41,4 @@ async def team(ctx, num1: int, num2: int, num3: int, num4: int, num5: int, num6:
         await ctx.send("Invalid position numbers. Please use numbers between 1 and 7.")
 
 # Run the bot with your token
-bot.run(MTE5ODA3MjQ5NjI4MTM3NDczMA.GJ5xI1.V1kkGUxNWFB8n4BVA8aWpTSw5ngjkDrPWI_VlE
-)
+bot.run(MTE5ODA3MjQ5NjI4MTM3NDczMA.GA4LEf.xOxw-lZN67OtrD0v8t40awKybkLWgztoYWF9mo)
